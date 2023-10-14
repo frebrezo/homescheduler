@@ -4,15 +4,15 @@ HomeScheduler is a sample Java/Spring API. HomeScheduler is a checkin/checkout a
 
 ## Entities
 * User
-  * https://github.com/ava-innersource/PacWestSWE/blob/main/csharp/HomeScheduler/HomeScheduler.Data/Entity/User.cs
+  * https://github.com/frebrezo/homescheduler/blob/main/csharp/HomeScheduler/HomeScheduler.Data/Entity/User.cs
   * Application user/roommate.
 * Availability
-  * https://github.com/ava-innersource/PacWestSWE/blob/main/csharp/HomeScheduler/HomeScheduler.Data/Entity/Availability.cs
+  * https://github.com/frebrezo/homescheduler/blob/main/csharp/HomeScheduler/HomeScheduler.Data/Entity/Availability.cs
   * State of the user. TRUE if the user AT HOME. FALSE if the user is NOT at home.
 
 ## API endpoints
 * GET /api/user
-  * https://github.com/ava-innersource/PacWestSWE/blob/main/csharp/HomeScheduler/HomeScheduler.Service/Controller/UserController.cs
+  * https://github.com/frebrezo/homescheduler/blob/main/csharp/HomeScheduler/HomeScheduler.Service/Controller/UserController.cs
   * Returns ALL users/roommates in the shared home.
 * GET /api/user/{id}
 * PUT /api/{id}/availability
@@ -20,7 +20,7 @@ HomeScheduler is a sample Java/Spring API. HomeScheduler is a checkin/checkout a
 * POST /api/user
 * PUT /api/user/{id}
 * GET /api/availability
-  * https://github.com/ava-innersource/PacWestSWE/blob/main/csharp/HomeScheduler/HomeScheduler.Service/Controller/AvailabilityController.cs
+  * https://github.com/frebrezo/homescheduler/blob/main/csharp/HomeScheduler/HomeScheduler.Service/Controller/AvailabilityController.cs
   * Returns list of availabilities for users. Availability is TRUE if user is AT HOME, or FALSE if NOT at home. By default, a user's availability record does not exist. The absence of an availability record means the user is available.
 * GET /api/availability/{id}
   * Returns availability by AvailabilityId.
@@ -33,7 +33,7 @@ HomeScheduler is a sample Java/Spring API. HomeScheduler is a checkin/checkout a
     * If using Windows Authentication, replace `User Id=dotnet-app;Password=*****` with `Integrated Security=True`.
 
 ## Database
-* https://github.com/ava-innersource/PacWestSWE/tree/main/csharp/HomeScheduler/sql
+* https://github.com/frebrezo/homescheduler/tree/main/mssql
 * Create database HomeScheduler in SQL Server.
 * Execute the SQL scripts in the following order
   * dbo.User.Table.sql
