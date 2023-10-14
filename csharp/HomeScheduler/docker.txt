@@ -1,0 +1,20 @@
+* https://www.isunshare.com/windows-10/change-network-from-public-to-private-in-windows-10.html#way4
+	* Use Ethernet adapter vEthernet (WSL) IP address
+	* Enable Ethernet adapter vEthernet (WSL) IP address for SQL Server TCP/IP connection
+	* Can't use integrated windows authentication in Linux environment
+* Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQLServer\SuperSocketNetLib\Tcp\IP1
+	* Update TCP/IP 1 for SQL Server with Ethernet adapter vEthernet (WSL) IP address
+* https://dev.to/agiboire/fixed-ip-for-wsl-instances-2ilf
+	* Update hosts file with wsl.local for Ethernet adapter vEthernet (WSL) IP address
+* docker ps
+	* Get docker process container ID
+* docker exec -i <container ID> cmd
+	* For windows prompt only
+	* Get docker command prompt
+
+* apt-get install iputils-ping
+	* Install ping in docker Linux environment
+
+* Disable Visual Studio from warming up container
+ 	* Remove reference to package Microsoft.VisualStudio.Azure.Containers.Tools.Targets (1.15.1).
+

@@ -1,0 +1,1 @@
+Scaffold-DbContext -Provider Microsoft.EntityFrameworkCore.SqlServer -Connection "Server=.;Database=HomeScheduler;User Id=dotnet-app;Password=Passw0rd1;" -OutputDir Entity -Force
