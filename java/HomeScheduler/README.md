@@ -27,7 +27,7 @@ HomeScheduler is a sample Java/Spring API. HomeScheduler is a checkin/checkout a
 
 ## Configuration
 * https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html
-* https://github.com/ava-innersource/PacWestSWE/blob/main/java/HomeScheduler/src/main/resources/application.properties
+* https://github.com/frebrezo/homescheduler/blob/main/java/HomeScheduler/src/main/resources/application.properties
 * spring.datasource.url
   * Database connection string.
 * spring.datasource.username
