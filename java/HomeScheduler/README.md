@@ -4,15 +4,15 @@ HomeScheduler is a sample Java/Spring API. HomeScheduler is a checkin/checkout a
 
 ## Entities
 * User
-  * https://github.com/ava-innersource/PacWestSWE/blob/main/java/HomeScheduler/src/main/java/org/wonkim/homescheduler/data/entity/User.java
+  * https://github.com/frebrezo/homescheduler/blob/main/java/HomeScheduler/src/main/java/org/wonkim/homescheduler/data/entity/User.java
   * Application user/roommate.
 * Availability
-  * https://github.com/ava-innersource/PacWestSWE/blob/main/java/HomeScheduler/src/main/java/org/wonkim/homescheduler/data/entity/Availability.java
+  * https://github.com/frebrezo/homescheduler/blob/main/java/HomeScheduler/src/main/java/org/wonkim/homescheduler/data/entity/Availability.java
   * State of the user. TRUE if the user AT HOME. FALSE if the user is NOT at home.
 
 ## API endpoints
 * GET /api/user
-  * https://github.com/ava-innersource/PacWestSWE/blob/main/java/HomeScheduler/src/main/java/org/wonkim/homescheduler/controller/UserController.java
+  * https://github.com/frebrezo/homescheduler/blob/main/java/HomeScheduler/src/main/java/org/wonkim/homescheduler/controller/UserController.java
   * Returns ALL users/roommates in the shared home.
 * GET /api/user/{id}
 * PUT /api/{id}/availability
@@ -20,14 +20,14 @@ HomeScheduler is a sample Java/Spring API. HomeScheduler is a checkin/checkout a
 * POST /api/user
 * PUT /api/user/{id}
 * GET /api/availability
-  * https://github.com/ava-innersource/PacWestSWE/blob/main/java/HomeScheduler/src/main/java/org/wonkim/homescheduler/controller/AvailabilityController.java
+  * https://github.com/frebrezo/homescheduler/blob/main/java/HomeScheduler/src/main/java/org/wonkim/homescheduler/controller/AvailabilityController.java
   * Returns list of availabilities for users. Availability is TRUE if user is AT HOME, or FALSE if NOT at home. By default, a user's availability record does not exist. The absence of an availability record means the user is available.
 * GET /api/availability/{id}
   * Returns availability by AvailabilityId.
 
 ## Configuration
 * https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html
-* https://github.com/ava-innersource/PacWestSWE/blob/main/java/HomeScheduler/src/main/resources/application.properties
+* https://github.com/frebrezo/homescheduler/blob/main/java/HomeScheduler/src/main/resources/application.properties
 * spring.datasource.url
   * Database connection string.
 * spring.datasource.username
@@ -54,7 +54,7 @@ HomeScheduler is a sample Java/Spring API. HomeScheduler is a checkin/checkout a
     * https://www.guru99.com/sql-server-create-user.html
     * For simplicity, add login to sysadmin server role. DO NOT DO THIS on real project. IT IS NOT a security best practice.
 * Database
-  * https://github.com/ava-innersource/PacWestSWE/tree/main/java/HomeScheduler/sql
+  * https://github.com/frebrezo/homescheduler/tree/main/mssql
   * Create database HomeScheduler in SQL Server.
   * Execute the SQL scripts in the following order
     * dbo.User.Table.sql
