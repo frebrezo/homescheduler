@@ -54,7 +54,7 @@ HomeScheduler is a sample Java/Spring API. HomeScheduler is a checkin/checkout a
     * https://www.guru99.com/sql-server-create-user.html
     * For simplicity, add login to sysadmin server role. DO NOT DO THIS on real project. IT IS NOT a security best practice.
 * Database
-  * https://github.com/frebrezo/homescheduler/tree/main/sql
+  * https://github.com/frebrezo/homescheduler/tree/main/mssql
   * Create database HomeScheduler in SQL Server.
   * Execute the SQL scripts in the following order
     * dbo.User.Table.sql
