@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  homescheduler-java:
+    build: .
+    image: homescheduler-java:latest
+    ports:
+      - 8080:8080
+    network_mode: bridge
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: homescheduler-java-deploy
+  labels:
+    app: homescheduler-java
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: homescheduler-java
+  template:
+    metadata:
+      labels:
+        app: homescheduler-java
+    spec:
+      containers:
+        - name: homescheduler-java
+          image: homeschedulercontainerreg.azurecr.io/homescheduler-java:latest
+          ports:
+            - containerPort: 8080
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: homescheduler-java-service
+  # https://cloud-provider-azure.sigs.k8s.io/topics/loadbalancer/#loadbalancer-annotations
+  #annotations:
+    #service.beta.kubernetes.io/azure-load-balancer-internal: "true"
+    #service.beta.kubernetes.io/azure-load-balancer-internal-subnet: "api-ingress-subnet"
+spec:
+  # Adds external IP address to the service
+  type: LoadBalancer
+  selector:
+    app: homescheduler-java
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+  sessionAffinity: ClientIP
+#  externalIPs:
+#    - 10.225.1.10

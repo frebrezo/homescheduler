@@ -1,0 +1,13 @@
+* sudo docker build --no-cache --progress=plain -t homescheduler-java .
+
+* sudo docker image ls
+* sudo docker container ls -a
+
+* sudo docker compose build
+* sudo docker compose up homescheduler-java
+* sudo docker compose down homescheduler-java
+
+* https://learn.microsoft.com/en-us/azure/container-registry/container-registry-get-started-docker-cli?tabs=azure-cli
+* sudo docker login homeschedulercontainerreg.azurecr.io
+* sudo docker tag homescheduler-java homeschedulercontainerreg.azurecr.io/homescheduler-java
+* sudo docker push homeschedulercontainerreg.azurecr.io/homescheduler-java

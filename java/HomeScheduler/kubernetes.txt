@@ -1,0 +1,42 @@
+* https://www.pumpingco.de/blog/control-ingress-to-aks-with-azure-api-management/
+* https://docs.netgate.com/pfsense/en/latest/network/cidr.html
+
+* https://learn.microsoft.com/en-us/azure/aks/tutorial-kubernetes-deploy-cluster?tabs=azure-cli
+* az aks get-credentials --resource-group homescheduler-rg --name homescheduler-aks
+* kubectl get nodes
+* az acr manifest list-metadata --name homescheduler-java --registry homeschedulercontainerreg
+
+* https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+* https://cloud-provider-azure.sigs.k8s.io/topics/loadbalancer/#loadbalancer-annotations
+* https://learn.microsoft.com/en-us/azure/aks/internal-lb?tabs=set-service-annotations
+* kubectl apply -f .\HomeScheduler-k8s-deploy.yaml
+
+* Restart kubernetes
+* kubectl rollout restart deployment homescheduler-java-deploy
+
+* kubectl get services
+* kubectl get all
+* kubectl get all -A
+* kubectl get deploy
+* kubectl get deploy -A
+
+* Scale to 2 pods
+* kubectl scale --replicas=2 deployment/homescheduler-java-deploy
+* Scale down
+* kubectl scale --replicas=0 deployment/homescheduler-java-deploy
+
+* https://stackoverflow.com/questions/61058684/how-to-delete-a-deployment-image-in-kubernetes
+* kubectl delete deploy homescheduler-java-deploy
+* kubectl delete service homescheduler-java-service
+
+* https://learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/troubleshoot-connection-pods-services-same-cluster
+kubectl run -it --rm aks-ssh --image=debian:stable
+
+apt-get update -y
+apt-get install dnsutils -y
+apt-get install curl -y
+apt-get install netcat -y
+
+curl -Iv http://10.225.1.10:8080
+
+
