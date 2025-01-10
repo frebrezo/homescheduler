@@ -1,0 +1,6 @@
+Django
+mssql-django
+pyodbc
+djangorestframework
+
+python_version >= "3.9"
